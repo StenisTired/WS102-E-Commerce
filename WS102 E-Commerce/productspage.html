@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Products - SchoolSupply Store</title>
+  <link rel="stylesheet" href="styleproduct.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <a href="WS_Ecommerece.html" class="logo">
+      <span class="logo-icon"><i class="fa-solid fa-box-archive"></i></span> 
+      SchoolSupply Store
+    </a>
+    <div class="nav-links">
+      <a href="WS_Ecommerece.html">Home</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">Products <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="productspage.html?category=notebooks">Notebooks</a>
+          <a href="productspage.html?category=pens">Pens</a>
+          <a href="productspage.html?category=folders">Folders</a>
+          <a href="productspage.html?category=art-materials">Art Materials</a>
+          <a href="productspage.html?category=bond-paper">Bond Paper</a>
+          <a href="productspage.html?category=calculators">Calculators</a>
+        </div>
+      </div>
+      <span id="cartIconNav" onclick="window.location.href='cartpage.html'" style="position:relative;cursor:pointer;color:#333;font-size:18px;">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cartBadgeNav" style="display:none;position:absolute;top:-7px;right:-8px;background:#cc0000;color:#fff;border-radius:50%;width:17px;height:17px;font-size:10px;font-weight:700;align-items:center;justify-content:center;"></span>
+      </span>
+      <button class="login-btn">Login</button>
+    </div>
+  </nav>
+
+  <section class="products-section">
+    <!-- Sidebar Filter -->
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Filter by Category</h2>
+      <ul class="sidebar-filter">
+        <li><button class="sidebar-btn active" data-filter="all">All</button></li>
+        <li><button class="sidebar-btn" data-filter="notebooks">Notebooks</button></li>
+        <li><button class="sidebar-btn" data-filter="pens">Pens</button></li>
+        <li><button class="sidebar-btn" data-filter="calculators">Calculators</button></li>
+        <li><button class="sidebar-btn" data-filter="folders">Folders</button></li>
+        <li><button class="sidebar-btn" data-filter="pencils">Pencils</button></li>
+        <li><button class="sidebar-btn" data-filter="markers">Markers</button></li>
+        <li><button class="sidebar-btn" data-filter="art-materials">Art Materials</button></li>
+        <li><button class="sidebar-btn" data-filter="bond-paper">Bond Paper</button></li>
+        <li><button class="sidebar-btn" data-filter="measurement">Measurement</button></li>
+        <li><button class="sidebar-btn" data-filter="erasers">Erasers</button></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Search Bar -->
+      <div class="search-bar-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search products...">
+      </div>
+
+      <!-- Results Count -->
+      <p class="results-count" id="resultsCount">Showing 6 products</p>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+
+        <div class="product-card" data-category="notebooks">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400" alt="Notebook">
+          </div>
+          <div class="product-info">
+            <span class="badge">Notebooks</span>
+            <h3>Spiral Notebook</h3>
+            <p>100-page spiral notebook with ruled paper</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.5 • Seller: SchoolSupply</div>
+            <div class="price-row">
+              <span class="price">₱45.00</span>
+              <span class="stock">Stock: 50</span>
+            </div>
+            <span class="unit">per piece</span>
+            <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="pens">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1585336139118-107b4434af32?w=400" alt="Pens">
+          </div>
+          <div class="product-info">
+            <span class="badge">Pens</span>
+            <h3>Blue Ballpen Set</h3>
+            <p>Set of 10 blue ballpoint pens</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.5 • Seller: SchoolSupply</div>
+            <div class="price-row">
+              <span class="price">₱35.00</span>
+              <span class="stock">Stock: 100</span>
+            </div>
+            <span class="unit">per bundle</span>
+            <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="calculators">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1594814171200-fe3588960249?w=400" alt="Calculator">
+          </div>
+          <div class="product-info">
+            <span class="badge">Calculators</span>
+            <h3>Scientific Calculator</h3>
+            <p>Advanced scientific calculator with 240 functions</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.5 • Seller: SchoolSupply</div>
+            <div class="price-row">
+              <span class="price">₱450.00</span>
+              <span class="stock">Stock: 25</span>
+            </div>
+            <span class="unit">per piece</span>
+            <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="folders">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=400" alt="Folder">
+          </div>
+          <div class="product-info">
+            <span class="badge">Folders</span>
+            <h3>Plastic Folder</h3>
+            <p>A4 size plastic folder, assorted colors</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.5 • Seller: SchoolSupply</div>
+            <div class="price-row">
+              <span class="price">₱15.00</span>
+              <span class="stock">Stock: 200</span>
+            </div>
+            <span class="unit">per piece</span>
+            <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="art-materials">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400" alt="Art Materials">
+          </div>
+          <div class="product-info">
+            <span class="badge">Art Materials</span>
+            <h3>Watercolor Set</h3>
+            <p>24-color watercolor paint set with brush</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.5 • Seller: SchoolSupply</div>
+            <div class="price-row">
+              <span class="price">₱120.00</span>
+              <span class="stock">Stock: 30</span>
+            </div>
+            <span class="unit">per set</span>
+            <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="bond-paper">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=400" alt="Bond Paper">
+          </div>
+          <div class="product-info">
+            <span class="badge">Bond Paper</span>
+            <h3>A4 Bond Paper</h3>
+            <p>500 sheets of premium quality A4 bond paper</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.5 • Seller: SchoolSupply</div>
+            <div class="price-row">
+              <span class="price">₱180.00</span>
+              <span class="stock">Stock: 75</span>
+            </div>
+            <span class="unit">per ream</span>
+            <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+          </div>
+        </div>
+
+      </div><!-- /.products-grid -->
+    </div><!-- /.main-content -->
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Your one-stop shop for all school supplies. We provide quality products at affordable prices.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="WS Ecommerece.html">Home</a></li>
+          <li><a href="productspage.html">Products</a></li>
+          <li><a href="cartpage.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <div class="contact-item"><i class="fa-regular fa-envelope"></i> support@schoolsupply.com</div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i> +63 123 456 7890</div>
+        <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Manila, Philippines</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SchoolSupply Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Cart helpers ──
+    function getCart() {
+      try { return JSON.parse(localStorage.getItem('ss_cart') || '[]'); } catch(e) { return []; }
+    }
+    function saveCart(cart) { localStorage.setItem('ss_cart', JSON.stringify(cart)); }
+
+    function updateNavBadge() {
+      const cart = getCart();
+      const total = cart.reduce((s, i) => s + i.qty, 0);
+      const badge = document.getElementById('cartBadgeNav');
+      if (total > 0) { badge.textContent = total; badge.style.display = 'flex'; }
+      else { badge.style.display = 'none'; }
+    }
+
+    function addToCart(name, desc, price, unit, img) {
+      const cart = getCart();
+      const existing = cart.find(i => i.name === name);
+      if (existing) { existing.qty++; }
+      else { cart.push({ name, desc, price, unit, img, qty: 1 }); }
+      saveCart(cart);
+      updateNavBadge();
+      alert(name + ' added to cart!');
+    }
+
+    // Wire up all Add to Cart buttons
+    document.querySelectorAll('.add-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const card = this.closest('.product-card');
+        const name = card.querySelector('h3').textContent;
+        const desc = card.querySelector('p').textContent;
+        const priceText = card.querySelector('.price').textContent.replace('₱','').trim();
+        const unit = card.querySelector('.unit').textContent;
+        const img = card.querySelector('img') ? card.querySelector('img').src : '';
+        addToCart(name, desc, parseFloat(priceText), unit, img);
+      });
+    });
+
+    updateNavBadge();
+
+    // Dropdown toggle
+    document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.dropdown').classList.toggle('active');
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelector('.dropdown').classList.remove('active');
+      }
+    });
+
+    // Sidebar filter
+    const sidebarBtns = document.querySelectorAll('.sidebar-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    const resultsCount = document.getElementById('resultsCount');
+
+    function updateCount() {
+      const visible = document.querySelectorAll('.product-card:not([style*="display: none"])').length;
+      resultsCount.textContent = `Showing ${visible} product${visible !== 1 ? 's' : ''}`;
+    }
+
+    sidebarBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sidebarBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        productCards.forEach(card => {
+          card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) ? 'flex' : 'none';
+        });
+        updateCount();
+      });
+    });
+
+    // Search
+    document.getElementById('searchInput').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      const activeFilter = document.querySelector('.sidebar-btn.active').getAttribute('data-filter');
+      productCards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        const desc = card.querySelector('p').textContent.toLowerCase();
+        const cat = card.getAttribute('data-category');
+        const matchesCategory = activeFilter === 'all' || cat === activeFilter;
+        const matchesSearch = name.includes(query) || desc.includes(query);
+        card.style.display = (matchesCategory && matchesSearch) ? 'flex' : 'none';
+      });
+      updateCount();
+    });
+
+    // URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    if (categoryParam) {
+      const targetBtn = document.querySelector(`.sidebar-btn[data-filter="${categoryParam}"]`);
+      if (targetBtn) targetBtn.click();
+    }
+
+    updateCount();
+  </script>
+
+</body>
+</html>

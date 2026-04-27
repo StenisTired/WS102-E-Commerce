@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SchoolSupply Store</title>
+  <link rel="stylesheet" href="stylehome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .cart-icon-wrap {
+      position: relative;
+      cursor: pointer;
+      color: #333;
+      font-size: 18px;
+    }
+    .cart-badge {
+      position: absolute;
+      top: -7px;
+      right: -8px;
+      background: #e60000;
+      color: #fff;
+      border-radius: 50%;
+      width: 17px;
+      height: 17px;
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="WS_Ecommerece.html" class="logo">
+      <span class="logo-icon"><i class="fa-solid fa-box-archive"></i></span> 
+      SchoolSupply Store
+    </a>
+    <div class="nav-links">
+      <a href="WS_Ecommerece.html">Home</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">Products <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="productspage.html?category=notebooks">Notebooks</a>
+          <a href="productspage.html?category=pens">Pens</a>
+          <a href="productspage.html?category=folders">Folders</a>
+          <a href="productspage.html?category=art-materials">Art Materials</a>
+          <a href="productspage.html?category=bond-paper">Bond Paper</a>
+          <a href="productspage.html?category=calculators">Calculators</a>
+        </div>
+
+      </div>
+      <span class="cart-icon-wrap" id="cartIconNav" onclick="window.location.href='cartpage.html'">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-badge" id="cartBadgeNav" style="display:none">0</span>
+      </span>
+      <button class="login-btn">Login</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to SchoolSupply Store</h1>
+      <p>Your trusted source for quality school supplies at affordable prices. Shop now and get ready for success!</p>
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search notebooks, pens, calculators...">
+      </div>
+      <button class="hero-btn">Browse All Products</button>
+    </div>
+  </section>
+
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <p style="color: #777;">Find what you need faster</p>
+    <div class="category-grid">
+      <button class="category-card" onclick="window.location.href='productspage.html?category=notebooks'"><i class="fa-solid fa-book"></i><span>Notebooks</span></button>
+      <button class="category-card" onclick="window.location.href='productspage.html?category=pens'"><i class="fa-solid fa-pen-nib"></i><span>Pens</span></button>
+      <button class="category-card" onclick="window.location.href='productspage.html?category=folders'"><i class="fa-solid fa-folder-open"></i><span>Folders</span></button>
+      <button class="category-card" onclick="window.location.href='productspage.html?category=calculators'"><i class="fa-solid fa-calculator"></i><span>Calculators</span></button>
+      <button class="category-card" onclick="window.location.href='productspage.html?category=art-materials'"><i class="fa-solid fa-palette"></i><span>Art Materials</span></button>
+      <button class="category-card" onclick="window.location.href='productspage.html?category=bond-paper'"><i class="fa-solid fa-file-lines"></i><span>Bond Paper</span></button>
+
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2>Top Items for You to Check Out</h2>
+      <p style="color: #777; margin-top: 10px;">Discover our handpicked featured products</p>
+    </div>
+
+    <div class="slideshow-container">
+      <button class="slide-nav prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="slides-wrapper">
+        <div class="slide active">
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400" alt="Notebook">
+                <span class="badge">Notebooks</span>
+              </div>
+              <div class="product-info">
+                <h3>Spiral Notebook</h3>
+                <p>100-page spiral notebook with ruled paper</p>
+                <div class="rating"><i class="fa-solid fa-star" style="color: #f1c40f;"></i> 4.5 • Seller: SchoolSupply</div>
+                <div class="price-row"><span class="price">₱45.00</span><span style="font-size:12px;color:#999">Stock: 50</span></div>
+                <span class="unit">per piece</span>
+                <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1585336139118-107b4434af32?w=400" alt="Pens">
+                <span class="badge">Pens</span>
+              </div>
+              <div class="product-info">
+                <h3>Blue Ballpen Set</h3>
+                <p>Set of 10 blue ballpoint pens</p>
+                <div class="rating"><i class="fa-solid fa-star" style="color: #f1c40f;"></i> 4.5 • Seller: SchoolSupply</div>
+                <div class="price-row"><span class="price">₱35.00</span><span style="font-size:12px;color:#999">Stock: 100</span></div>
+                <span class="unit">per bundle</span>
+                <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1594814171200-fe3588960249?w=400" alt="Calculator">
+                <span class="badge">Calculators</span>
+              </div>
+              <div class="product-info">
+                <h3>Scientific Calculator</h3>
+                <p>Advanced scientific calculator with 240 functions</p>
+                <div class="rating"><i class="fa-solid fa-star" style="color: #f1c40f;"></i> 4.5 • Seller: SchoolSupply</div>
+                <div class="price-row"><span class="price">₱450.00</span><span style="font-size:12px;color:#999">Stock: 25</span></div>
+                <span class="unit">per piece</span>
+                <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=400" alt="Folder">
+                <span class="badge">Folders</span>
+              </div>
+              <div class="product-info">
+                <h3>Plastic Folder</h3>
+                <p>A4 size plastic folder, assorted colors</p>
+                <div class="rating"><i class="fa-solid fa-star" style="color: #f1c40f;"></i> 4.5 • Seller: SchoolSupply</div>
+                <div class="price-row"><span class="price">₱15.00</span><span style="font-size:12px;color:#999">Stock: 200</span></div>
+                <span class="unit">per piece</span>
+                <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400" alt="Art Materials">
+                <span class="badge">Art Materials</span>
+              </div>
+              <div class="product-info">
+                <h3>Watercolor Set</h3>
+                <p>24-color watercolor paint set with brush</p>
+                <div class="rating"><i class="fa-solid fa-star" style="color: #f1c40f;"></i> 4.5 • Seller: SchoolSupply</div>
+                <div class="price-row"><span class="price">₱120.00</span><span style="font-size:12px;color:#999">Stock: 30</span></div>
+                <span class="unit">per set</span>
+                <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=400" alt="Bond Paper">
+                <span class="badge">Bond Paper</span>
+              </div>
+              <div class="product-info">
+                <h3>A4 Bond Paper</h3>
+                <p>500 sheets of premium quality A4 bond paper</p>
+                <div class="rating"><i class="fa-solid fa-star" style="color: #f1c40f;"></i> 4.5 • Seller: SchoolSupply</div>
+                <div class="price-row"><span class="price">₱180.00</span><span style="font-size:12px;color:#999">Stock: 75</span></div>
+                <span class="unit">per ream</span>
+                <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="slide-nav next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <button class="view-all-btn" onclick="window.location.href='productspage.html'">View All Products</button>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Your one-stop shop for all school supplies. We provide quality products at affordable prices.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="WS_Ecommerece.html">Home</a></li>
+          <li><a href="productspage.html">Products</a></li>
+          <li><a href="cartpage.html">Cart</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <div class="contact-item"><i class="fa-regular fa-envelope"></i> support@schoolsupply.com</div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i> +63 123 456 7890</div>
+        <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Manila, Philippines</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SchoolSupply Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dropdown toggle
+    document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.dropdown').classList.toggle('active');
+    });
+    
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelector('.dropdown').classList.remove('active');
+      }
+    });
+
+    // Slideshow functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+    
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+    
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    }
+    
+    document.querySelector('.next-btn').addEventListener('click', nextSlide);
+    document.querySelector('.prev-btn').addEventListener('click', prevSlide);
+    
+    // Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // ── Cart badge ──
+    function getCart() {
+      try { return JSON.parse(localStorage.getItem('ss_cart') || '[]'); }
+      catch(e) { return []; }
+    }
+
+    function updateNavBadge() {
+      const cart = getCart();
+      const total = cart.reduce((s, i) => s + i.qty, 0);
+      const badge = document.getElementById('cartBadgeNav');
+      if (badge) {
+        if (total > 0) { badge.textContent = total; badge.style.display = 'flex'; }
+        else { badge.style.display = 'none'; }
+      }
+    }
+
+    updateNavBadge();
+  </script>
+
+</body>
